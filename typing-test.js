@@ -47,7 +47,24 @@ function update() {
 }
 
 function updateCharactersStatus() {
-  // TODO: Complete this function
+  const chTyped = textArea.value[typedCharacter - 1];
+  const chSpan = typeText.children[typedCharacter - 1];
+
+  if (textArea.value.length < typedCharacter) {
+    typedCharacter -= 2;
+    chEdited = typeText.children[typedCharacter];
+    if (chEdited.className === 'incorrect-char') {
+      errors--;
+    }
+    chEdited.removeAttribute("class");
+  } else {
+    if (chTyped == chSpan.textContent) {
+      chSpan.classList.add('correct-char');
+    } else {
+      chSpan.classList.add('incorrect-char');
+      errors++;
+    }
+  }
 }
 
 function updateAccuracy() {
