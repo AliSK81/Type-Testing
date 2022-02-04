@@ -68,15 +68,21 @@ function updateCharactersStatus() {
 }
 
 function updateAccuracy() {
-  // TODO: Complete this function
+  if (typedCharacter === 0) {
+    accuracy = 100;
+  } else {
+    accuracy = Math.round((typedCharacter - errors) / typedCharacter * 100);
+  }
+  accuracyText.textContent = accuracy;
 }
 
 function updateErrors() {
-  // TODO: Complete this function
+  errorText.textContent = errors;
 }
 
 function updateWpm() {
-  // TODO: Complete this function
+  wpm = Math.round(typedCharacter / 5 / timeElapsed * 60);
+  wpmText.textContent = wpm;
 }
 
 function updateTimer() {
