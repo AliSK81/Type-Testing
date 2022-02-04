@@ -1,2 +1,6 @@
 # Type-Testing
-link to this problem: https://quera.org/problemset/132240/
+Link to this problem:
+https://quera.org/problemset/132240/
+
+Test your typing here:
+https://alisk.w3spaces.com/typing-test/index.html
