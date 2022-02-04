@@ -86,9 +86,17 @@ function updateWpm() {
 }
 
 function updateTimer() {
-  // TODO: Complete this function
+  if (timeLeft > 0) {
+    timeLeft--;
+    timeElapsed++;
+    timerText.textContent = timeLeft
+    updateWpm();
+  } else {
+    finishTest();
+  }
 }
 
 function finishTest() {
-  // TODO: Complete this function
+  clearInterval(timer);
+  textArea.disabled = true;
 }
